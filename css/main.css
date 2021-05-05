@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "components.css";
 @import "blog-post.css";
 @import "design-system.css";
-@import "components.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 
