@@ -5,6 +5,96 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #F0F8FF;
+}
+.container {
+    display: grid;
+    grid-template-columns: 8fr;
+    grid-template-rows: minmax(150px, auto) minmax(800px, auto) minmax(150px, auto);
+}
+
+#dinner {
+    grid-area: dinner;
+}
+
+#cultivation {
+    grid-area: cultivation;
+}
+
+#grapes {
+    grid-area: grapes;
+}
+
+#red-wine {
+    grid-area: red-wine;
+}
+
+#sauvignon {
+    grid-area: sauvignon;
+}
+
+#shiraz {
+    grid-area: shiraz;
+}
+
+/* Mobile */
+@media screen and (min-width: 250px) and (max-width: 900px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: minmax(200px, auto);
+        grid-template-rows: repeat(6, minmax(200px, auto));
+        grid-template-areas:
+                "dinner"
+                "cultivation"
+                "grapes"
+                "red-wine"
+                "sauvignon"
+                "shiraz";
+        justify-content: space-evenly;
+        grid-row-gap: 20px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 901px) and (max-width: 1365px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, auto));
+        grid-template-rows: repeat(3, minmax(300px, auto));
+        grid-template-areas:
+                "dinner cultivation"
+                "grapes red-wine"
+                "sauvignon shiraz";
+        justify-content: space-evenly;
+        grid-row-gap: 25px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1366px) {
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, auto));
+        grid-template-rows: repeat(3, minmax(500px, auto));
+        grid-template-areas:
+                "dinner cultivation"
+                "grapes red-wine"
+                "sauvignon shiraz";
+        justify-content: space-evenly;
+        grid-row-gap: 50px;
+    }
+}
+
+
+/* DELETE */
+.container > div {
+    background-color: bisque;
+    border: 1px solid red;
+}
+
+.card-grid > div {
+    background-color: aquamarine;
+    border: 1px solid green;
 }
 
 
