@@ -1,12 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap');
 @import "components.css";
 @import "blog-post.css";
 @import "design-system.css";
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+    color: dimgrey;
     background-color: #F0F8FF;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 2em;
+}
+
+.navigation {
+    display: flex;
+    padding: 10%;
+}
+
+.navbar {
+    width: 30%;
+}
+
+.about {
+    padding-right: 10%;
+}
+
 .container {
     display: grid;
     grid-template-columns: 8fr;
@@ -37,6 +63,82 @@ body {
     grid-area: shiraz;
 }
 
+/* Card - Begin */
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img {
+    background-image: url("../img/shiraz-cultivation-autumn.png");
+    background-size: cover;
+    flex: 1 1 50%;
+}
+
+.card-body {
+    flex: 1 1 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title {
+    padding-bottom: 10%;
+    border-bottom: 1px solid grey;
+}
+
+.card-text {
+    font-weight: 400;
+    padding: 10% 0 10% 0;
+    text-align: justify;
+}
+/* Card - End  */
+
+/* Social -  Begin */
+.social-sharing {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10%;
+}
+
+.facebook {
+    background-image: url("../img/facebook.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+.twitter {
+    background-image: url("../img/twitter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+.instagram {
+    background-image: url("../img/instagram.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+/* Social -  End */
+
+/* Footer -  Begin */
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.design-system {
+    padding-top: 4%;
+}
+/* Footer -  End */
+
 /* Mobile */
 @media screen and (min-width: 250px) and (max-width: 900px) {
     .card-grid {
@@ -59,7 +161,7 @@ body {
 @media screen and (min-width: 901px) and (max-width: 1365px) {
     .card-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(300px, auto));
+        grid-template-columns: repeat(2, minmax(15%, 25%));
         grid-template-rows: repeat(3, minmax(300px, auto));
         grid-template-areas:
                 "dinner cultivation"
@@ -74,7 +176,7 @@ body {
 @media screen and (min-width: 1366px) {
     .card-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(500px, auto));
+        grid-template-columns: repeat(2, minmax(20%, 30%));
         grid-template-rows: repeat(3, minmax(500px, auto));
         grid-template-areas:
                 "dinner cultivation"
@@ -85,16 +187,16 @@ body {
     }
 }
 
-
-/* DELETE */
+/* DELETE LATER */
 .container > div {
-    background-color: bisque;
+   /* background-color: bisque;*/
     border: 1px solid red;
 }
 
-.card-grid > div {
-    background-color: aquamarine;
-    border: 1px solid green;
-}
+/*.card-grid > div {
+  background-color: aquamarine;
+   border: 1px solid lightgrey;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
 
 
